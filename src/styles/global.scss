@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/Raleway-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/Raleway-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: Raleway;
+  background-color: $background;
+}
+
+.crypto-button {
+  border-radius: 30px;
+  border: solid 1px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+article {
+  border-radius: 8px;
+}

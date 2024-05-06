@@ -1,0 +1,44 @@
+.navbar {
+  background-color: #000 !important;
+  .navbar-brand {
+    span:nth-child(1) {
+      color: $navbar-brand-title;
+      font-weight: bold;
+    }
+    span:nth-child(2) {
+      color: $navbar-brand-subtitle;
+      font-weight: normal;
+    }
+  }
+  .navbar-toggler-icon {
+    background-image: $toggler-icon;
+  }
+
+  .navbar-collapse {
+    .nav-item {
+      a {
+        color: $navbar-text-color;
+      }
+      a.active {
+        color: $navbar-active-link;
+      }
+    }
+
+    span {
+      text-align: center;
+      @media (min-width: 320px) {
+        display: block;
+        width: 100%;
+      }
+      @media (min-width: 992px) {
+        display: inline;
+        width: auto;
+      }
+      button {
+        border-color: $navbar-button-color;
+        color: $navbar-button-color;
+        width: 131px;
+      }
+    }
+  }
+}

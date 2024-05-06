@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import paymentsCuate from "../../assets/img/payments-cuate.png";
+import "./Banner.scss";
+---
+
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <span> Pagos cómodos y rápidos </span>
+        <h1>
+          Acepta pagos con <br /><span class="fw-bold">Criptomonedas</span><br
+          />en tu tienda online
+        </h1>
+        <p>
+          El mejor servicio que ofrece efectividad, rapidéz, la mejor comisiín
+          del mercado de <span class="fw-bold">1% sobre cada venta</span> y la garantía
+          del mejor tipo de cambio al momento de la tranzacción, variedad de criptomonedas
+          y connecciones estratégicas con Bitso y Otros wallets de criptomonedas.
+        </p>
+        <button>Empezar ahora</button>
+      </div>
+      <div class="col-md-6">
+        <Image class="w-100 h-auto" src={paymentsCuate} alt="Payment" />
+      </div>
+    </div>
+  </div>
+</article>

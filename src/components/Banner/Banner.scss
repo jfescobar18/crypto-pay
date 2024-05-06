@@ -1,0 +1,8 @@
+article {
+  background: $banner-gradient-bg-color;
+  background: $banner-gradient-bg-effect;
+  @media (min-width: 320px) {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
