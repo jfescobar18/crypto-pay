@@ -1,6 +1,18 @@
-article {
+.banner {
   background: $banner-gradient-bg-color;
   background: $banner-gradient-bg-effect;
+
+  .row {
+    padding: 24px 16px 0 16px;
+    .description {
+      font-size: 14px;
+      font-weight: bold;
+      color: $highlight-text-color;
+      display: block;
+      margin-bottom: 60px;
+    }
+  }
+
   @media (min-width: 320px) {
     width: 90%;
     margin: 0 auto;
