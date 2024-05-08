@@ -1,8 +1,8 @@
 $background: #010101;
-$navbar-brand-title: #7c0000;
+$dark-text-color: #7c0000;
 $navbar-brand-subtitle: #fff;
 $toggler-icon: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-$navbar-text-color: #fff;
+$light-text-color: #fff;
 $navbar-active-link: #00f2f2;
 $highlight-text-color: #007c7c;
 $banner-gradient-bg-color: rgb(22, 22, 22);
@@ -10,6 +10,11 @@ $banner-gradient-bg-effect: inear-gradient(
   180deg,
   rgba(22, 22, 22, 1) 0%,
   rgba(26, 12, 12, 1) 100%
+);
+$banner-gradient-color: linear-gradient(
+  94.02deg,
+  #7c0000 2.47%,
+  #e10000 51.27%
 );
 $info-background-color: #360000;
 $info-gradient-color: linear-gradient(
