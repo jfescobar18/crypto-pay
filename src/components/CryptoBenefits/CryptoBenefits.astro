@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import paymentsCuate from "../../assets/img/device.png";
+import deviceRed from "../../assets/img/device-Red.png";
 import maskGroupMobile from "../../assets/img/mask-Group-Mobile.png";
 import maskGroupDesktop from "../../assets/img/mask-Group-Desktop.png";
 import "./CryptoBenefits.scss";
@@ -25,11 +25,7 @@ import "./CryptoBenefits.scss";
         <button class="crypto-button" type="button">Obtener API</button>
       </div>
       <div class="col-md-6">
-        <Image
-          class="h-auto deviceImage"
-          src={paymentsCuate}
-          alt="paymentsCuate"
-        />
+        <Image class="h-auto deviceImage" src={deviceRed} alt="paymentsCuate" />
         <Image
           class="w-100 h-auto responsive-image mobile"
           src={maskGroupMobile}

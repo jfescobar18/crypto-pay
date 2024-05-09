@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import deviceBlue from "../../assets/img/device-Blue.png";
+import maskGroup2 from "../../assets/img/mask-Group-2.png";
+import "./CryptoServiceDescription.scss";
+---
+
+<article class="CryptoServiceDescription">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>Tienes un ecommerce y quieres cobrar en criptomonedas?</h1>
+        <p>
+          El mejor servicio que ofrece efectividad, rapidéz y la garantía del
+          mejor tipo de cambio al momento de la tranzacción, variedad de
+          criptomonedas y connecciones estratégicas con Bitso y Otros wallets de
+          criptomonedas. <br /><br />
+          Rapidéz y la garantía del mejor tipo de cambio al momento.
+        </p>
+        <button class="crypto-button blue" type="button">Obtener API</button>
+      </div>
+      <div class="col-md-6">
+        <Image
+          class="h-auto deviceImage"
+          src={deviceBlue}
+          alt="paymentsCuate"
+        />
+        <Image
+          class="w-100 h-auto responsive-image"
+          src={maskGroup2}
+          alt="maskGroupMobile"
+        />
+      </div>
+    </div>
+  </div>
+</article>

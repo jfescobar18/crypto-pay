@@ -29,6 +29,19 @@ body {
   padding-bottom: 12px;
 }
 
+.crypto-button {
+  &.red {
+    color: $light-text-color;
+    background-color: $dark-text-color;
+    border-color: $dark-text-color;
+  }
+  &.blue {
+    color: $light-text-color;
+    background-color: $highlight-text-color;
+    border-color: $highlight-text-color;
+  }
+}
+
 article {
   border-radius: 8px;
 }
