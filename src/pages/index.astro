@@ -5,23 +5,84 @@ import CryptoPayment from "../components/CryptoPayment/CryptoPayment.astro";
 import InfoSeparator from "../components/InfoSeparator/InfoSeparator.astro";
 import CryptoBenefits from "../components/CryptoBenefits/CryptoBenefits.astro";
 import CryptoPaymentBenefits from "../components/CryptoPaymentBenefits/CryptoPaymentBenefits.astro";
-import CryptoServiceDescription from "../components/CryptoServiceDescription/CryptoServiceDescription.astro";
+import CryptoFeatureDescription from "../components/CryptoFeatureDescription/CryptoFeatureDescription.astro";
+// assets
+import deviceRed from "../assets/img/device-Red.png";
+import deviceBlue from "../assets/img/device-Blue.png";
+import maskGroup2 from "../assets/img/mask-Group-2.png";
+import maskGroup3 from "../assets/img/mask-Group-3.png";
+import maskGroup4 from "../assets/img/mask-Group-4.png";
 ---
 
 <Layout title="Home">
   <main>
     <Navbar />
+
     <CryptoPayment />
+
     <InfoSeparator>
       <span>Acepta pagos con</span>
       <span class="gradient"><b class="fw-bold">Criptomonedas</b> en</span>
       <span>tu tienda online</span>
     </InfoSeparator>
+
     <CryptoBenefits />
+
     <CryptoPaymentBenefits />
+
     <InfoSeparator>
       <span class="gradient">¿Cómo funciona?</span>
     </InfoSeparator>
-    <CryptoServiceDescription />
+
+    <CryptoFeatureDescription
+      title="Tienes un ecommerce y quieres cobrar en criptomonedas?"
+      buttonStyle="blue"
+      buttonText="Obtener API"
+      device={deviceBlue}
+      featureImage={maskGroup2}
+    >
+      El mejor servicio que ofrece efectividad, rapidéz y la garantía del mejor
+      tipo de cambio al momento de la tranzacción, variedad de criptomonedas y
+      connecciones estratégicas con Bitso y Otros wallets de criptomonedas.
+      <br /><br />
+      Rapidéz y la garantía del mejor tipo de cambio al momento.
+    </CryptoFeatureDescription>
+
+    <CryptoFeatureDescription
+      title="¿Quieres comprar por primera vez con tus Criptomonedas?"
+      buttonStyle="red"
+      buttonText="Button"
+      device={deviceRed}
+      featureImage={maskGroup3}
+    >
+      El mejor servicio que ofrece efectividad, rapidéz y la garantía del mejor
+      tipo de cambio al momento de la tranzacción, variedad de criptomonedas y
+      connecciones estratégicas con Bitso y Otros wallets de criptomonedas.
+      <br /><br />
+      Rapidéz y la garantía del mejor tipo de cambio al momento.
+    </CryptoFeatureDescription>
+
+    <CryptoFeatureDescription
+      title="¿Eres Developer?"
+      buttonStyle="blue"
+      buttonText="Ver Documentación"
+      device={deviceBlue}
+      featureImage={maskGroup4}
+    >
+      El mejor servicio que ofrece efectividad, rapidéz y la garantía del mejor
+      tipo de cambio al momento de la tranzacción, variedad de criptomonedas y
+      connecciones estratégicas con Bitso y Otros wallets de criptomonedas.
+      <br /><br />
+      Rapidéz y la garantía del mejor tipo de cambio al momento de la tranzacción,
+      variedad de .
+      <br /><br />
+      El mejor servicio que ofrece efectividad, rapidéz y la garantía del mejor tipo
+      de cambio al momento de la tranzacción, variedad de criptomonedas y connecciones
+      estratégicas con Bitso y Otros wallets de criptomonedas.
+    </CryptoFeatureDescription>
+
+    <InfoSeparator>
+      <span class="gradient">¿Necesitas ayuda?</span>
+    </InfoSeparator>
   </main>
 </Layout>
