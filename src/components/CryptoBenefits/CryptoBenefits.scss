@@ -1,4 +1,4 @@
-.banner {
+.cryptoBenefits {
   background: $banner-gradient-bg-color;
   background: $banner-gradient-bg-effect;
 
@@ -31,6 +31,34 @@
       color: $light-text-color;
       background-color: $dark-text-color;
       border-color: $dark-text-color;
+      margin-bottom: 225px;
+    }
+
+    .deviceImage {
+      width: 180px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) translateY(-155px);
+      z-index: 1;
+    }
+
+    .responsive-image {
+      display: none;
+      width: calc(100% + 56px) !important;
+      transform: translateX(-28px);
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 767px) {
+      .responsive-image.mobile {
+        display: block;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .responsive-image.desktop {
+        display: block;
+      }
     }
   }
 

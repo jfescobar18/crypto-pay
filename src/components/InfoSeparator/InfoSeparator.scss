@@ -2,7 +2,6 @@
   margin-top: 40px;
   margin-bottom: 40px;
   article {
-    font-weight: bold;
     font-size: 20px;
     text-align: center;
     background-color: $info-background-color;
@@ -10,7 +9,6 @@
     span {
       display: block;
       color: $highlight-text-color;
-      background-color: $info-background-color;
       &.gradient {
         background-color: $info-background-color;
         background-image: $info-gradient-color;

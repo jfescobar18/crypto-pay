@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import cryptoPortfolioAmico from "../../assets/img/crypto-Portfolio-Amico.png";
+import "./CryptoPaymentBenefits.scss";
+---
+
+<article class="cryptoPaymentBenefits">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="fw-bold">
+          <span>Criptopagos </span>
+          <span>Cripto </span>
+          <span>Pagos</span>
+        </h1>
+        <p>
+          El mejor servicio que ofrece efectividad, rapidéz y la garantía del
+          mejor tipo de cambio al momento de la tranzacción, variedad de
+          criptomonedas y connecciones estratégicas con Bitso y Otros wallets de
+          criptomonedas. <br /><br />
+          Rapidéz y la garantía del mejor tipo de cambio al momento de la tranzacción,
+          variedad de criptomonedas y connecciones estratégicas con Bitso y Otros
+          wallets de criptomonedas.
+        </p>
+        <button class="crypto-button" type="button">Empezar ahora</button>
+      </div>
+      <div class="col-md-6">
+        <Image class="w-100 h-auto" src={cryptoPortfolioAmico} alt="Payment" />
+      </div>
+    </div>
+  </div>
+</article>

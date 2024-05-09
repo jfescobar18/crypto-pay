@@ -1,14 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar/Navbar.astro";
-import Banner from "../components/Banner/Banner.astro";
+import CryptoPayment from "../components/CryptoPayment/CryptoPayment.astro";
 import InfoSeparator from "../components/InfoSeparator/InfoSeparator.astro";
+import CryptoBenefits from "../components/CryptoBenefits/CryptoBenefits.astro";
+import CryptoPaymentBenefits from "../components/CryptoPaymentBenefits/CryptoPaymentBenefits.astro";
 ---
 
 <Layout title="Home">
   <main>
     <Navbar />
-    <Banner />
-    <InfoSeparator />
+    <CryptoPayment />
+    <InfoSeparator>
+      <span>Acepta pagos con</span>
+      <span class="gradient"><b class="fw-bold">Criptomonedas</b> en</span>
+      <span>tu tienda online</span>
+    </InfoSeparator>
+    <CryptoBenefits />
+    <CryptoPaymentBenefits />
+    <InfoSeparator>
+      <span class="gradient">¿Cómo funciona?</span>
+    </InfoSeparator>
   </main>
 </Layout>
