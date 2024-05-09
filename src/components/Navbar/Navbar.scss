@@ -1,6 +1,9 @@
 .navbar {
   background-color: #000 !important;
   .navbar-brand {
+    a {
+      font-size: 24px;
+    }
     span:nth-child(1) {
       color: $dark-text-color;
       font-weight: bold;
