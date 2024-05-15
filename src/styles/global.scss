@@ -46,3 +46,36 @@ body {
 article {
   border-radius: 8px;
 }
+
+.input-box {
+  position: relative;
+  .crypto-input {
+    background: none;
+    border: $highlight-text-color solid 2px;
+    border-radius: 6px;
+    width: 100%;
+    color: $clear-text-color;
+    padding: 10px 0;
+    color: #fff;
+    outline: none;
+    &:focus,
+    &:active {
+      outline: none;
+      ~ label {
+        top: -20px;
+        left: 0;
+        font-size: 12px;
+      }
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 12px 10px;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.3s;
+  }
+}
