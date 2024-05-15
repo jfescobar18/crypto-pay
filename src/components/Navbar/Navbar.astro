@@ -1,5 +1,6 @@
 ---
 import "./Navbar.scss";
+const currentPath = Astro.url.pathname;
 ---
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -19,16 +20,41 @@ import "./Navbar.scss";
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Home</a>
+          <a class=`nav-link ${currentPath === '/' ? 'active' : ''}` href="/">
+            Home
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">One Link</a>
+          <a
+            class=`nav-link ${currentPath === '/login' ? 'active' : ''}`
+            href="/login"
+          >
+            Login
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">Documentación</a>
+          <a
+            class=`nav-link ${currentPath === '/getting-started' ? 'active' : ''}`
+            href="/getting-started"
+          >
+            Comenzar ahora
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link Link</a>
+          <a
+            class=`nav-link ${currentPath === '/developers' ? 'active' : ''}`
+            href="/developers"
+          >
+            Developers
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class=`nav-link ${currentPath === '/how-it-works' ? 'active' : ''}`
+            href="/how-it-works"
+          >
+            ¿Cómo funciona?
+          </a>
         </li>
       </ul>
       <span>
