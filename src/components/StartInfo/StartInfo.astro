@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import check from "../../assets/icon/check.svg";
+import "./StartInfo.scss";
+---
+
+<article class="StartInfo">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <span class="description"> Pagos cómodos y rápidos </span>
+        <h1>
+          Comisión del <br /><span class="fw-bold">1%</span><br />por
+          transacción
+        </h1>
+        <p>
+          Registrate ahora sin ningún costo, obtén nuestra api y cobra en
+          criptomonedas.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="info-card">
+    <div class="container w-100">
+      <p>
+        1% <br />
+        de comisión<br />
+        por venta<br />
+      </p>
+      <span><Image class="icon-check" src={check} alt="icon-check" /></span>
+    </div>
+    <div class="info-text">
+      <span>Accede de inmediato a nuestra <b>API</b></span>
+      <hr />
+      <span><b>Sin costo</b> por iniciar a cobrar con criptomonedas</span>
+      <hr />
+      <span>Confiable y seguro, directo a tu <b>wallet</b> bitso o behance</span
+      >
+      <button class="crypto-button" type="button">Registrarme</button>
+    </div>
+  </div>
+</article>
