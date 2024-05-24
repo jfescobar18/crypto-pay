@@ -6,7 +6,7 @@ import InfoSeparator from "../components/InfoSeparator/InfoSeparator.astro";
 import CryptoBenefits from "../components/CryptoBenefits/CryptoBenefits.astro";
 import CryptoPaymentBenefits from "../components/CryptoPaymentBenefits/CryptoPaymentBenefits.astro";
 import CryptoFeatureDescription from "../components/CryptoFeatureDescription/CryptoFeatureDescription.astro";
-import ContactFooter from "../components/ContactFooter/ContactFooter.astro"
+import ContactFooter from "../components/ContactFooter/ContactFooter.astro";
 // assets
 import deviceRed from "../assets/img/device-Red.png";
 import deviceBlue from "../assets/img/device-Blue.png";
@@ -36,6 +36,7 @@ import maskGroup4 from "../assets/img/mask-Group-4.png";
     </InfoSeparator>
 
     <CryptoFeatureDescription
+      direction="left"
       title="Tienes un ecommerce y quieres cobrar en criptomonedas?"
       buttonStyle="blue"
       buttonText="Obtener API"
@@ -50,6 +51,7 @@ import maskGroup4 from "../assets/img/mask-Group-4.png";
     </CryptoFeatureDescription>
 
     <CryptoFeatureDescription
+      direction="right"
       title="¿Quieres comprar por primera vez con tus Criptomonedas?"
       buttonStyle="red"
       buttonText="Button"
@@ -64,6 +66,7 @@ import maskGroup4 from "../assets/img/mask-Group-4.png";
     </CryptoFeatureDescription>
 
     <CryptoFeatureDescription
+      direction="left"
       title="¿Eres Developer?"
       buttonStyle="blue"
       buttonText="Ver Documentación"

@@ -3,8 +3,16 @@
   background: $banner-gradient-bg-effect;
 
   .row {
-    padding: 24px 16px 0 16px;
     color: $light-text-color;
+    margin-bottom: 40px;
+    .col-md-6 {
+      &:nth-child(1) {
+        padding: 24px 16px 0 16px;
+      }
+      &:nth-child(2) {
+        padding: 0;
+      }
+    }
     .description {
       font-size: 14px;
       font-weight: bold;
@@ -44,9 +52,42 @@
 
     .responsive-image {
       display: none;
-      width: calc(100% + 56px) !important;
-      transform: translateX(-28px);
       margin-bottom: 20px;
+    }
+
+    @media (min-width: 768px) {
+      align-items: center;
+      justify-content: center;
+      height: fit-content;
+      position: relative;
+
+      .deviceImage {
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+
+    @media (min-width: 992px) {
+      .deviceImage {
+        transform: translateX(-50%) translateY(11%);
+      }
+    }
+    
+    @media (min-width: 1200px) {
+      .deviceImage {
+        transform: translateX(-50%) translateY(25%);
+      }
+    }
+    
+    @media (min-width: 1397px) {
+      .deviceImage {
+        transform: translateX(-50%) translateY(28%);
+      }
+    }
+    
+    @media (min-width: 1440px) {
+      .deviceImage {
+        transform: translateX(-50%) translateY(40%);
+      }
     }
 
     @media (max-width: 767px) {

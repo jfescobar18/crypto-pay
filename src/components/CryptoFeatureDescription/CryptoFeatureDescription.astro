@@ -2,18 +2,21 @@
 import { Image } from "astro:assets";
 import "./CryptoFeatureDescription.scss";
 
-const { title, buttonStyle, buttonText, device, featureImage } = Astro.props;
+const { direction, title, buttonStyle, buttonText, device, featureImage } =
+  Astro.props;
 ---
 
 <article class="CryptoFeatureDescription">
   <div class="container">
-    <div class="row">
+    <div class=`row ${direction}`>
       <div class="col-md-6">
         <h1>{title}</h1>
         <p>
           <slot />
         </p>
-        <button class=`crypto-button ${buttonStyle}` type="button">{buttonText}</button>
+        <button class=`crypto-button ${buttonStyle}` type="button"
+          >{buttonText}</button
+        >
       </div>
       <div class="col-md-6">
         <Image class="h-auto deviceImage" src={device} alt="device" />
