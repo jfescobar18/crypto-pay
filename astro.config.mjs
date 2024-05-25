@@ -12,5 +12,5 @@ export default defineConfig({
         },
     },
     site: "https://jfescobar18.github.io/crypto-pay/",
-    base: "crypto-pay"
+    base: "/crypto-pay"
 });
