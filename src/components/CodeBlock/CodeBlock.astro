@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+import copy from "../../assets/icon/copy.svg";
+import "./CodeBlock.scss";
+
+const { header, code } = Astro.props;
+---
+
+<article class="CodeBlock">
+  <div class="editor">
+    <div class="header">
+      {header}
+      <Image class="icon-check" src={copy} alt="icon-check" />
+    </div>
+    <div class="code-container">
+      <textarea class="code-editor" readonly>{code}</textarea>
+      <div class="line-numbers"></div>
+    </div>
+  </div>
+</article>
+
+<script>
+  function initCodeBlock(element: { querySelector: (arg0: string) => any }) {
+    const textarea = element.querySelector(".code-editor");
+    const lineNumbers = element.querySelector(".line-numbers");
+
+    function updateLineNumbers() {
+      const lines = textarea.value.split("\n").length;
+      let lineNumberHTML = "";
+      for (let i = 1; i <= lines; i++) {
+        lineNumberHTML += `${i}<br/><span class="line-separator"></span>`;
+      }
+      lineNumbers.innerHTML = lineNumberHTML;
+    }
+
+    textarea.addEventListener("input", updateLineNumbers);
+    textarea.addEventListener("scroll", () => {
+      lineNumbers.scrollTop = textarea.scrollTop;
+    });
+
+    updateLineNumbers();
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const codeBlocks = document.querySelectorAll(".CodeBlock");
+    codeBlocks.forEach(initCodeBlock);
+  });
+</script>

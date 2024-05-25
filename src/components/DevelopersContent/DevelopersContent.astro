@@ -1,8 +1,146 @@
 ---
-import DevelopersToggle from "../DevelopersToggle/DevelopersToggle.astro";
+import BarSeparator from "../BarSeparator/BarSeparator.astro";
+import CodeBlock from "../CodeBlock/CodeBlock.astro";
 import "./DevelopersContent.scss";
 ---
 
 <article class="DevelopersContent">
-  <DevelopersToggle />
+  <div class="developers-nav">
+    <div class="section toggle-option api active">API</div>
+    <BarSeparator />
+    <div class="section toggle-option components">Componentes</div>
+  </div>
+
+  <div class="developers">
+    <div class="developers-toggle">
+      <div class="toggle-option api active">API</div>
+      <div class="toggle-option components">Componentes</div>
+    </div>
+    <div class="row api visible">
+      <span class="description">
+        <b>Parametros de la API y uso de puntos de conección</b>
+      </span>
+      <div class="description-table">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="header text-center">Parámetro</div>
+          </div>
+          <div class="col-sm-6">
+            <div class="header text-center">Descripción</div>
+          </div>
+        </div>
+        <BarSeparator />
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="parameter text-left">/CRYPTO_TRANSFER_ID</div>
+          </div>
+          <div class="col-sm-6">
+            <div class="description text-left">
+              Solución Registrate ahora sin ningún costo, obtén
+              <span>transfer_success_BTC</span> nuestra api y cobra en criptomonedas.
+            </div>
+          </div>
+        </div>
+        <BarSeparator />
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="parameter text-left">/BTC_TRANSFER_ID</div>
+          </div>
+          <div class="col-sm-6">
+            <div class="description text-left">
+              Solución Registrate ahora sin ningún costo, obtén
+              <span>transfer_success_BTC</span> nuestra api y cobra en criptomonedas.
+            </div>
+          </div>
+        </div>
+        <BarSeparator />
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="parameter text-left">
+              /ETH_TRANSFER_ID_REJ ECTED_ERROR03
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="description text-left">
+              Solución Registrate ahora sin ningún costo, obtén
+              <span>transfer_success_BTC</span> nuestra api y cobra en criptomonedas.
+            </div>
+          </div>
+        </div>
+        <BarSeparator />
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="parameter text-left">/CRYPTO_NO_FUNDS_ID</div>
+          </div>
+          <div class="col-sm-6">
+            <div class="description text-left">
+              Solución Registrate ahora sin ningún costo, obtén
+              <span>transfer_success_BTC</span> nuestra api y cobra en criptomonedas.
+            </div>
+          </div>
+        </div>
+        <BarSeparator />
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="parameter text-left">/BTC_TRANSFER_ID</div>
+          </div>
+          <div class="col-sm-6">
+            <div class="description text-left">
+              Solución Registrate ahora sin ningún costo, obtén
+              <span>transfer_success_BTC</span> nuestra api y cobra en criptomonedas.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row components">
+      <span class="description">
+        <b>Integración de botón de pago con cripto en tu ecommerce</b>
+        <br /><br />
+        Parametro
+        <br /><br />
+        Solución Registrate ahora sin ningún costo, obtén transfer_success_BTC nuestra
+        api y cobra en este texto en de posición y con fines de pruebas y construcción,
+        criptomonedas, Solución Registrate ahora.
+      </span>
+
+      <!-- HTML -->
+      <CodeBlock
+        header="HTML"
+        code='// SDK Criptopay.js\n <script src="https://sdk.mercadopago.com/js/v2"></script>'
+      />
+      <!-- Javscript -->
+      <CodeBlock
+        header="Javscript"
+        code='const mp = new MercadoPago("YOUR_PUBLIC_KEY");\n const bricksBuilder = mp.bricks();'
+      />
+    </div>
+  </div>
+
+  <div class="developers-nav"></div>
 </article>
+
+<script>
+  const toggleOptions = document.querySelectorAll(".toggle-option");
+  const api = document.querySelectorAll(".row.api");
+  const components = document.querySelectorAll(".row.components");
+  let activeTab = "api";
+
+  toggleOptions.forEach((option) => {
+    option.addEventListener("click", function () {
+      toggleOptions.forEach((opt) => opt.classList.remove("active"));
+      option.classList.add("active");
+      api[0].classList.remove("visible");
+      components[0].classList.remove("visible");
+
+      if (option.classList.contains("api")) {
+        activeTab = "api";
+        api[0].classList.add("visible");
+      } else {
+        activeTab = "components";
+        components[0].classList.add("visible");
+      }
+    });
+  });
+</script>
