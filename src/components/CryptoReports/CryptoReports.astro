@@ -152,23 +152,39 @@ import BarSeparator from "../BarSeparator/BarSeparator.astro";
 </article>
 
 <script>
-  const segment1 = 20;
-  const segment2 = 30;
+  const segment1 = 60;
+  const segment2 = 25;
+  const segment3 = 15;
 
   const offset1 = 25;
   const offset2 = offset1 + segment1;
+  const offset3 = offset2 + segment2;
 
-  document
-    .querySelector(".segment1")
-    .setAttribute("stroke-dasharray", `${segment1} ${100 - segment1}`);
-  document
-    .querySelector(".segment1")
-    .setAttribute("stroke-dashoffset", offset1);
+  const segment1Element = document.querySelector(".segment1");
+  const segment2Element = document.querySelector(".segment2");
+  const segment3Element = document.querySelector(".segment3");
 
-  document
-    .querySelector(".segment2")
-    .setAttribute("stroke-dasharray", `${segment2} ${100 - segment2}`);
-  document
-    .querySelector(".segment2")
-    .setAttribute("stroke-dashoffset", offset2);
+  if (segment1Element) {
+    segment1Element.setAttribute(
+      "stroke-dasharray",
+      `${segment1} ${100 - segment1}`
+    );
+    segment1Element.setAttribute("stroke-dashoffset", `${offset1}`);
+  }
+
+  if (segment2Element) {
+    segment2Element.setAttribute(
+      "stroke-dasharray",
+      `${segment2} ${100 - segment2}`
+    );
+    segment2Element.setAttribute("stroke-dashoffset", `${offset2}`);
+  }
+
+  if (segment3Element) {
+    segment3Element.setAttribute(
+      "stroke-dasharray",
+      `${segment3} ${100 - segment3}`
+    );
+    segment3Element.setAttribute("stroke-dashoffset", `${offset3}`);
+  }
 </script>
