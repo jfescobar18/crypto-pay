@@ -1,0 +1,338 @@
+.CryptoReports {
+  .reports-bar {
+    display: none;
+    color: $clear-text-color;
+    padding: 24px;
+    font-weight: bold;
+    @media (min-width: 992px) {
+      background: #{$login-form-background} + 1a;
+      width: 20%;
+      display: block;
+    }
+  }
+  .reports {
+    background: #{$login-form-background} + 1a;
+    color: $clear-text-color;
+    width: 90%;
+    margin: 0 auto;
+    .row {
+      padding: 0 32px;
+      margin-bottom: 40px;
+      .description {
+        font-size: 14px;
+        color: $clear-text-color;
+        display: flex;
+        margin-top: 32px;
+        margin-bottom: 27px;
+        flex-direction: column;
+        padding: 0;
+        span {
+          color: $light-highlight-text-color;
+          font-size: 16px;
+        }
+        b {
+          font-size: 20px;
+        }
+        small {
+          font-size: 12px;
+        }
+      }
+      .report-container {
+        width: 100%;
+        padding: 0;
+        background: $editor-background-color;
+        border-radius: 8px;
+        .period-selection {
+          font-size: 12px;
+          width: 100%;
+          height: 40px;
+          background: $toggleBackground;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          border-radius: 8px 8px 0 0;
+          span {
+            width: 20%;
+            text-align: center;
+            border-radius: 8px;
+            &:hover {
+              cursor: pointer;
+            }
+            &.active {
+              background: #{$login-form-background} + 1a;
+              color: $light-highlight-text-color;
+            }
+          }
+        }
+        .report-info {
+          border-radius: 0 0 8px 8px;
+          padding: 0 5%;
+          .report-chart {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0 10px 0;
+            .chart-container {
+              width: 35%;
+              .chart {
+                width: 205px;
+                height: 205px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .donut {
+                  transform: rotate(-90deg);
+                  z-index: 1;
+                }
+                .decorator {
+                  width: 150px;
+                  height: 150px;
+                  border-radius: 50%;
+                  background: linear-gradient(0deg, #7c0000 0%, #000000 100%);
+                  transform: rotate(185deg);
+                  position: absolute;
+                  z-index: 0;
+                  .space {
+                    width: 90px;
+                    height: 90px;
+                    border-radius: 50%;
+                    background: $editor-background-color;
+                    position: absolute;
+                    top: 30px;
+                    left: 30px;
+                  }
+                }
+              }
+            }
+            .details {
+              width: 50%;
+              display: flex;
+              flex-wrap: wrap;
+              flex-direction: row;
+              align-items: center;
+              align-content: center;
+              justify-content: space-between;
+              .detail-card {
+                width: 30%;
+                height: 92px;
+                background-color: $light-text-color;
+                font-weight: bold;
+                text-align: center;
+                border-radius: 8px;
+                .header {
+                  border-radius: 8px 8px 0 0;
+                  height: 20px;
+                  background: linear-gradient(
+                    260.47deg,
+                    #7c0000 0%,
+                    #000000 114.72%
+                  );
+                  width: 100%;
+                }
+                .total {
+                  margin-top: 20px;
+                  span {
+                    color: $black;
+                    font-size: 12px;
+                    font-weight: 300;
+                    display: block;
+                  }
+                }
+                &:first-child {
+                  width: 100%;
+                  height: 105px;
+                  color: $dark-text-color;
+                  margin-bottom: 8px;
+                }
+                &:nth-child(2) {
+                  color: $light-highlight-text-color;
+                }
+                &:nth-child(3) {
+                  color: $yellow-text;
+                }
+                &:nth-child(4) {
+                  color: $red-text;
+                }
+              }
+            }
+          }
+          .report-summary {
+            background: $clear-text-color;
+            width: 90%;
+            margin: 0 auto;
+            border-radius: 8px;
+            .header {
+              color: $light-highlight-text-color;
+              font-size: 12px;
+              height: 24px;
+              background: linear-gradient(
+                260.47deg,
+                #7c0000 0%,
+                #000000 108.98%
+              );
+              border-radius: 8px 8px 0 0;
+              display: flex;
+              align-items: center;
+              padding-left: 12px;
+            }
+            .content {
+              color: $black;
+              font-size: 14px;
+              text-align: center;
+              padding: 30px;
+              .total {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                .mid-col {
+                  width: 45%;
+                  small {
+                    color: $highlight-text-color;
+                    &.red {
+                      color: $dark-text-color;
+                    }
+                  }
+                  b {
+                    color: $highlight-text-color;
+                  }
+                  &:first-child {
+                    margin-bottom: 16px;
+                  }
+                }
+              }
+              .detail {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                .mid-col {
+                  width: 45%;
+                  small {
+                    color: $highlight-text-color;
+                    &.red {
+                      color: $dark-text-color;
+                    }
+                  }
+                }
+              }
+            }
+            .footer {
+              border-radius: 0 0 8px 8px;
+              height: 48px;
+              font-size: 15px;
+              text-align: center;
+              background: linear-gradient(
+                260.47deg,
+                #7c0000 0%,
+                #000000 108.98%
+              );
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-around;
+              flex-wrap: wrap;
+              .total-btc {
+                color: $light-highlight-text-color;
+                width: 45%;
+              }
+              .total-mxn {
+                width: 45%;
+              }
+            }
+          }
+          .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .crypto-button {
+              width: 90%;
+              margin: 35px 0;
+              font-size: 14px;
+              color: $clear-text-color;
+              background: $dark-text-color;
+              border: $dark-text-color;
+            }
+          }
+        }
+      }
+    }
+    @media (min-width: 992px) {
+      width: 50%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .reports {
+      .row {
+        .report-container {
+          .period-selection {
+            span {
+              &:last-child {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                span {
+                  display: inline;
+                  width: fit-content;
+                }
+                img {
+                  width: 24px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 768px) {
+    .reports {
+      .row {
+        .report-container {
+          background: none;
+          .period-selection {
+            span {
+              &:last-child {
+                span {
+                  display: none;
+                }
+                img {
+                  width: 24px;
+                }
+              }
+            }
+          }
+          .report-info {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .report-chart {
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              .details {
+                width: 80%;
+              }
+              .chart-container {
+                width: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

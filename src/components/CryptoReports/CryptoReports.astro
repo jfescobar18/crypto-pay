@@ -1,0 +1,174 @@
+---
+import { Image } from "astro:assets";
+import calendar from "../../assets/icon/calendar.svg";
+import btc from "../../assets/icon/btc.svg";
+import mark from "../../assets/icon/mark.svg";
+import "./CryptoReports.scss";
+import BarSeparator from "../BarSeparator/BarSeparator.astro";
+---
+
+<article class="CryptoReports">
+  <div class="reports-bar"></div>
+
+  <div class="reports">
+    <div class="row">
+      <span class="description">
+        <span>Reportes</span>
+        <b>Parametros de la API y uso de puntos de conección</b>
+        <small>Selecciona el plazo que quieres consultar</small>
+      </span>
+      <div class="container report-container">
+        <div class="period-selection">
+          <span>Mes pasado</span>
+          <span class="active">Hoy</span>
+          <span>Esta semana</span>
+          <span>Este año</span>
+          <span>
+            <Image class="icon-calendar" src={calendar} alt="icon-calendar" />
+            <span>Elegir plazo</span>
+          </span>
+        </div>
+        <div class="report-info">
+          <div class="report-chart">
+            <div class="chart-container">
+              <div class="chart">
+                <svg width="205" height="205" viewBox="0 0 42 42" class="donut">
+                  <circle
+                    class="ring-background"
+                    cx="21"
+                    cy="21"
+                    r="15.91549431"
+                    fill="transparent"
+                    stroke="#2e2a2a"
+                    stroke-width="5"></circle>
+                  <circle
+                    class="ring-segment segment1"
+                    cx="21"
+                    cy="21"
+                    r="15.91549431"
+                    fill="transparent"
+                    stroke="#1fc0d8"
+                    stroke-width="5"></circle>
+                  <circle
+                    class="ring-segment segment2"
+                    cx="21"
+                    cy="21"
+                    r="15.91549431"
+                    fill="transparent"
+                    stroke="#b28a21"
+                    stroke-width="5"></circle>
+                </svg>
+                <div class="decorator">
+                  <div class="space"></div>
+                </div>
+              </div>
+            </div>
+            <div class="details">
+              <div class="detail-card">
+                <div class="header"></div><div class="total">
+                  <span>Fichas de pago generadas</span>45
+                </div>
+              </div>
+              <div class="detail-card">
+                <div class="header"></div><div class="total">
+                  <span>Pagadas</span>32
+                </div>
+              </div>
+              <div class="detail-card">
+                <div class="header"></div><div class="total">
+                  <span>Pendientes</span>10
+                </div>
+              </div>
+              <div class="detail-card">
+                <div class="header"></div><div class="total">
+                  <span>Expiradas</span>3
+                </div>
+              </div>
+            </div>
+          </div>
+          <BarSeparator />
+          <div class="report-summary">
+            <div class="header">Hoy</div>
+            <div class="content">
+              <div class="total">
+                <div class="mid-col">
+                  <b>12</b> Fichas pagadas en <Image
+                    class="icon-btc"
+                    src={btc}
+                    alt="icon-btc"
+                  /> BTC
+                </div>
+                <div class="mid-col">Equivalente en MXN</div>
+
+                <div class="mid-col">
+                  0.00007634238 <br />
+                  <small>Total en tu wallet</small>
+                </div>
+                <div class="mid-col">
+                  $ 2,908.08 MXN*<br />
+                  <small class="red">17/06/24 2:34pm </small>
+                </div>
+              </div>
+              <BarSeparator />
+              <div class="detail">
+                <div class="mid-col">
+                  0.00007634238<br />
+                  <small>Total en tu wallet</small>
+                </div>
+                <div class="mid-col">
+                  $ 2,908.08 MXN*<br />
+                  <small class="red">17/06/24 2:34pm </small>
+                </div>
+              </div>
+              <BarSeparator />
+              <div class="detail">
+                <div class="mid-col">
+                  0.00007634238<br />
+                  <small>Total en tu wallet</small>
+                </div>
+                <div class="mid-col">
+                  $ 2,908.08 MXN*<br />
+                  <small class="red">17/06/24 2:34pm </small>
+                </div>
+              </div>
+            </div>
+            <div class="footer">
+              <div class="total-btc"><b>Total en BTC</b>$ 5,053.47</div>
+              <div class="total-mxn">
+                Equivalente total*<br />$ 5,053.47
+                <Image class="icon-mark" src={mark} alt="icon-mark" />
+              </div>
+            </div>
+          </div>
+          <div class="button-container">
+            <button class="crypto-button" type="button">Descargar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reports-bar"></div>
+</article>
+
+<script>
+  const segment1 = 20;
+  const segment2 = 30;
+
+  const offset1 = 25;
+  const offset2 = offset1 + segment1;
+
+  document
+    .querySelector(".segment1")
+    .setAttribute("stroke-dasharray", `${segment1} ${100 - segment1}`);
+  document
+    .querySelector(".segment1")
+    .setAttribute("stroke-dashoffset", offset1);
+
+  document
+    .querySelector(".segment2")
+    .setAttribute("stroke-dasharray", `${segment2} ${100 - segment2}`);
+  document
+    .querySelector(".segment2")
+    .setAttribute("stroke-dashoffset", offset2);
+</script>

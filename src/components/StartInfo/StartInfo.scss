@@ -33,6 +33,13 @@
         background-color: $dark-text-color;
         border-color: $dark-text-color;
       }
+
+      @media (min-width: 768px) {
+        margin: 0 auto;
+        width: 410px;
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
   .container {
@@ -59,6 +66,12 @@
       p {
         font-size: 14px;
         margin-bottom: 26px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      &.w-100 {
+        max-width: 100%;
       }
     }
   }
