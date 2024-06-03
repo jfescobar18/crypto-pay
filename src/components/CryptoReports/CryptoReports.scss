@@ -67,7 +67,7 @@
         }
         .report-info {
           border-radius: 0 0 8px 8px;
-          padding: 0 5%;
+          padding: 0;
           .report-chart {
             width: 100%;
             display: flex;
@@ -161,7 +161,7 @@
           }
           .report-summary {
             background: $clear-text-color;
-            width: 90%;
+            width: 100%;
             margin: 0 auto;
             border-radius: 8px;
             .header {
@@ -190,7 +190,8 @@
                 justify-content: space-around;
                 flex-wrap: wrap;
                 .mid-col {
-                  width: 45%;
+                  width: 40%;
+                  margin: 0 10px;
                   small {
                     color: $highlight-text-color;
                     &.red {
@@ -212,7 +213,8 @@
                 justify-content: space-around;
                 flex-wrap: wrap;
                 .mid-col {
-                  width: 45%;
+                  width: 40%;
+                  margin: 0 10px;
                   small {
                     color: $highlight-text-color;
                     &.red {
@@ -325,7 +327,7 @@
               justify-content: center;
               align-items: center;
               .details {
-                width: 80%;
+                width: 100%;
               }
               .chart-container {
                 width: auto;
